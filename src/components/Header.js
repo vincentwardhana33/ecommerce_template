@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -99,12 +100,10 @@ class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav nav-mega mx-auto">
                     <li className="nav-item active">
-                    <a className="nav-link ml-lg-0" href="index.html">Home
-                        <span className="sr-only">(current)</span>
-                    </a>
+                        <Link className="nav-link ml-lg-0" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="about.html">About</a>
+                        <Link className="nav-link ml-lg-0" to="/about">About</Link>
                     </li>
                     <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
