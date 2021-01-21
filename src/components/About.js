@@ -15,7 +15,7 @@ class About extends Component {
     return (
       <div>
         <div className="banner-top container-fluid" id="home">
-            <Header />
+            <Header navAbout='active' />
             <Nav_Banner path_location="About Us" />
         </div>
         <section className="banner-bottom-wthreelayouts py-lg-5 py-3">

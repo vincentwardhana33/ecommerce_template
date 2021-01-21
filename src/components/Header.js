@@ -99,10 +99,10 @@ class Header extends Component {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav nav-mega mx-auto">
-                    <li className="nav-item active">
+                    <li className={`nav-item ${this.props.navHome}`}>
                         <Link className="nav-link ml-lg-0" to="/">Home</Link>
                     </li>
-                    <li className="nav-item">
+                    <li className={`nav-item ${this.props.navAbout}`}>
                         <Link className="nav-link ml-lg-0" to="/about">About</Link>
                     </li>
                     <li className="nav-item dropdown">

@@ -15,7 +15,7 @@ class Homepage extends Component {
     return (
       <div>
         <div className="banner-top container-fluid" id="home">
-            <Header />
+            <Header navHome='active' />
             <Banner />
         </div>
         <section className="banner-bottom-wthreelayouts py-lg-5 py-3">
