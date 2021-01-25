@@ -34,15 +34,35 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      var d = new Date();
+      simplyCountdown('simply-countdown-custom', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 2,
+        day: 25
+      });
+
+      $(document).ready(function () {
+        $("#myModal").modal();
+      });
+
+      $(document).ready(function () {
+        $(".button-log a").click(function () {
+          $(".overlay-login").fadeToggle(200);
+          $(this).toggleClass('btn-open').toggleClass('btn-close');
+        });
+      });
+      $('.overlay-close1').on('click', function () {
+        $(".overlay-login").fadeToggle(200);
+        $(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
+        open = false;
+      });
+    });
+</script>
+
   <!--jQuery-->
   <script src="js/jquery-2.2.3.min.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $("#myModal").modal();
-    });
-  </script>
-  <!-- // modal -->
 
   <!--search jQuery-->
   <script src="js/modernizr-2.6.2.min.js"></script>
@@ -65,31 +85,12 @@
     });
   </script>
   <!-- //cart-js -->
-  <script>
-    $(document).ready(function () {
-      $(".button-log a").click(function () {
-        $(".overlay-login").fadeToggle(200);
-        $(this).toggleClass('btn-open').toggleClass('btn-close');
-      });
-    });
-    $('.overlay-close1').on('click', function () {
-      $(".overlay-login").fadeToggle(200);
-      $(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
-      open = false;
-    });
-  </script>
+
   <!-- carousel -->
   <!-- Count-down -->
   <script src="js/simplyCountdown.js"></script>
   <link href="css/simplyCountdown.css" rel='stylesheet' type='text/css' />
-  <script>
-    var d = new Date();
-    simplyCountdown('simply-countdown-custom', {
-      year: d.getFullYear(),
-      month: d.getMonth() + 2,
-      day: 25
-    });
-  </script>
+
   <!--// Count-down -->
   <script src="js/owl.carousel.js"></script>
   <script>
