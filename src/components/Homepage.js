@@ -10,7 +10,23 @@ import Advantages from './Advantages';
 import Sub_Banner from './Sub_Banner';
 import Sale from './Sale';
 
+import axios from 'axios';
+
 class Homepage extends Component {
+
+  state = {
+    products: []
+  }
+ 
+  componentWillMount(){
+    axios.get('http://localhost:3001/product')
+    .then((result) => {
+      this.setState({
+        products: result.data
+      })
+    })
+  };
+
   render() {
     return (
       <div>
@@ -23,7 +39,7 @@ class Homepage extends Component {
             <div className="inner-sec-shop px-lg-4 px-3">
                 <h3 className="tittle-w3layouts my-lg-4 my-4">New Arrivals for you </h3>
                 
-                <Product />
+                <Product products = {this.state.products} />
                 <Sale />
                 <Product_Slider />
                 <Testimonials />
