@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Product extends Component {
   render() {
@@ -6,15 +7,17 @@ class Product extends Component {
         return <div className="col-md-3 product-men women_two">
         <div className="product-googles-info googles">
             <div className="men-pro-item">
+            <Link to={`/detail/${item.id}`}>
             <div className="men-thumb-item">
-                <img src={item.image_url} className="img-fluid" alt="" />
-                <div className="men-cart-pro">
+                <img src={`http://localhost:3001/assets/images/${item.image_filename}`} className="img-fluid" alt="" />
+                {/* <div className="men-cart-pro">
                 <div className="inner-men-cart-pro">
-                    <a href="single.html" className="link-product-add-cart">Quick View</a>
+                    Quick View
                 </div>
-                </div>
+                </div> */}
                 <span className="product-new-top">New</span>
             </div>
+            </Link>
             <div className="item-info-product">
                 <div className="info-product-price">
                 <div className="grid_meta">
